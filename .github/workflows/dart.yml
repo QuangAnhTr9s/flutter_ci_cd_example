@@ -20,5 +20,7 @@ jobs:
           channel: stable
           flutter-version: 3.32.0
 
-      - name: Flutter version
-        run: flutter --version
+      - run: flutter pub get
+      - run: flutter test
+      - run: flutter build apk
+      - run: flutter build appbundle
